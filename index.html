@@ -1,0 +1,72 @@
+<head>
+    <title>Gaming console</title>
+</head>
+<style>
+    h1{
+        /* background-color: aqua; */
+        color: rgb(251, 255, 0);
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    button{
+        background-color: green;
+        color: white;
+    }
+    #one{
+        margin-top: 30px;
+    }
+    #three{
+        color:green
+    }
+    #two{
+        color:white;
+    }
+    body {
+      
+      
+  background-image: url('image.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#division{
+    margin-top: 10%;
+    margin-left:50%;
+}
+
+</style>
+<body>
+    
+<div id="division">
+<h1>Guess The Number !!</h1>
+<center>
+    <input type="number" id="num">
+     <button onclick="guess()">Check</button>
+<h2 id="one">Welcome to the Guessing number game !</h2>
+<h2 id="three">Enter a Number between 0 and 11</h2>
+<h2 id="two">Your Score is : </h2>
+</center>
+</div>
+<script>
+    var score=0;
+    function guess(){
+
+var a=document.getElementById("num");
+var b=Number(a.value);
+var c=Math.floor(Math.random()*10)+1;
+var d=document.getElementById("one");
+var e=document.getElementById("two");
+
+  
+if(b==c)
+{
+   alert("Congratulations !! You Won the Game!");
+    d.textContent="Play Again.."
+    score++;
+    e.textContent="Your Score is :"+Number(score);
+   
+}
+else{
+d.textContent="Sorry! You are wrong. Try Again !"
+}}
+</script>
+</body>
